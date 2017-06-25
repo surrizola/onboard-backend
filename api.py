@@ -8,7 +8,7 @@ import face_match
 import os
 
 
-# docker run -p 5000:5000 -e PORT=500  -v "$PWD":/root/face_recognition image/python python3 api.py
+# docker run -p 5000:5000 -e PORT=5000  -v "$PWD":/root/face_recognition image/python python3 api.py
 
 #docker run -p 5000:5000 image/python
 
@@ -27,6 +27,13 @@ def create_task():
     #print (request.json['selfie'])
     dni_img = request.json['dni']
     selfie_img = request.json['selfie']
+
+    print ("selfie")
+    dni_img
+
+    print ("dni")
+    selfie_img
+
     
     #dni_img_data = re.sub('^data:image/.+;base64,', '', dni_img)
     #selfie_img_data = re.sub('^data:image/.+;base64,', '', selfie_img)
@@ -78,6 +85,7 @@ if __name__ == '__main__':
 
 
 
+    print ("STARTING API")
     port = int(os.environ.get("PORT", 5000))
 
     app.run(debug=True,host="0.0.0.0",port=port)
