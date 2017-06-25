@@ -1,5 +1,6 @@
-before_script:
-  apt-get update
+#before_script:
+#  script:
+#    apt-get update
 
 
 rspec:
@@ -7,4 +8,3 @@ rspec:
     - echo "hola"  
 
 
-    
