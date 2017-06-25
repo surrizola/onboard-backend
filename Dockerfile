@@ -1,4 +1,4 @@
-# This is a sample Dockerfile you can modify to deploy your own app based on face_recognition
+# https://hub.docker.com/
 
 FROM python:3.4-slim
 
