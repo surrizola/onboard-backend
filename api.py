@@ -54,18 +54,13 @@ def create_task():
     save_base64_to_image(selfie_img, 'tmp_selfie123.png')
 
     check = face_match.test_dni_selfie('tmp_dni123.png', 'tmp_selfie123.png')
-    print("CHECK {}".format(check))
+    print("CHECK {}".format(check['check']))
     #fh = open("selfie.png", "wb")
     #fh.write(selfie_img_data.decode('base64'))
     #fh.close()
 
-    task = {
-        'id': 1,        
-        'check': str(check)
-        
-    }
-    
-    return jsonify(task), 200
+    print (check)
+    return jsonify(check), 200
 
 
 def save_base64_to_image(base64_string, file_name):
