@@ -1,0 +1,10 @@
+before_script:
+  apt-get update
+
+
+rspec:
+  script:
+    - echo "hola"  
+
+
+    
